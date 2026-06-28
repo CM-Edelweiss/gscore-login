@@ -30,17 +30,17 @@ def setup_logging(level: str) -> None:
         ),
         enqueue=False,
     )
-    logger.add(
-        f'logs/{datetime.now().strftime("%Y-%m-%d")}.log',
-        level=level.upper(),
-        format=(
-            "<green>{time:YYYY-MM-DD HH:mm:ss}</green> "
-            "| <level>{level:<7}</level> | "
-            # "<cyan>{name}:{function}:{line}</cyan> - "
-            "<level>{message}</level>"
-        ),
-        enqueue=False,
-    )
+    #logger.add(
+    #    f'logs/{datetime.now().strftime("%Y-%m-%d")}.log',
+    #    level=level.upper(),
+    #    format=(
+    #        "<green>{time:YYYY-MM-DD HH:mm:ss}</green> "
+    #        "| <level>{level:<7}</level> | "
+    #        # "<cyan>{name}:{function}:{line}</cyan> - "
+    #        "<level>{message}</level>"
+    #    ),
+    #    enqueue=False,
+    #)
     handler = _InterceptHandler()
     logging.basicConfig(handlers=[handler], level=0, force=True)
     for name in ("uvicorn", "uvicorn.error", "uvicorn.access", "fastapi"):
