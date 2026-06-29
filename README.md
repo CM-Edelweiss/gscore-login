@@ -2,6 +2,11 @@
 
 gscore 外置登录服务。让 bot 端不用对外暴露端口也能跑登录。
 
+
+## 公共地址
+
+- [gscore-login](https://login.xiamoshi.icu/)
+
 ## 启动
 
 ```sh
